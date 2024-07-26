@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чистый Мир - Вывоз Мусора</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+       body {
+            font-family: 'Mulish', sans-serif;
+        }
+        .highlight {
+            color: green;
+        }
+        .cta-button {
+            background-color: #28a745;
+            color: white;
+        }
+        .bgmain {background-image: url(img/fonsite.png);
+    background-size: cover;padding-bottom:30px;
+    background-position: center;}
+         .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .features .feature-item {
+            display: flex;
+            align-items: center;font-size:14px;
+            justify-content: center;
+height:60px;          font-weight:700;
+border-radius: 18px;
+            background-color: #28a745;
+            color: white;
+            margin: 5px;
+            flex: 0 0 calc(25% - 10px); /* 25% ширина минус отступы */
+            box-sizing: border-box;
+        }
+        .features .feature-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .form-group {
+            background: white;
+            padding-top: 17px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+            border-radius: 18px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .truck-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        .section-title2 {
+            font-size: 30px;
+            font-weight:400;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+        font-size: 36px;
+        font-weight:800;
+        margin-bottom: 2rem;
+        }
+        .service-item {
+        text-align: center;
+        padding: 20px;
+        background: #fff;
+        border-radius: 18px;
+        margin-bottom: 20px;
+        flex: 0 0 32%; /* три блока в ряд с отступами */
+        box-sizing: border-box;
+        }
+        .service-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        }
+        .service-item p {
+        font-weight: 400;
+        font-size: 14px;
+        }
+        .service-item .price {
+        font-weight: 800;
+        font-size: 16px;
+        margin: 10px 0;
+        }
+        .service-item .btnbox {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        font-size: 14px;margin-top:5%;margin-bottom:5%;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        .service-item .btnbox:hover {
+        background-color: #218838;
+        }
+        .footer {
+background-color: #1A1A1A;
+padding: 40px 0;
+color: white;
+        }
+
+
+        .footer h5 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-family: 'Mulish', sans-serif !important;
+            font-weight: 400;
+        }
+        .footer p, .footer ul {
+            margin-bottom: 10px;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+        .t16400 {font-size: 16px;
+        font-weight: 400;color:#BABABA;
+        line-height: 19.2px;
+        }
+
+        .t14400 {font-size: 14px;
+        font-weight: 400;color:#BABABA!important;
+        line-height: 19.2px;
+        }
+
+        .text_p {color: #080F2F; font-weight:500;}
+        .text_fu  {color: #080F2F; font-weight:400!important;}
+        .text_fu1  {color: #080F2F; font-weight:700!important;}  .contact-info {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #e9ecef;
+            border-radius: 50%;
+            padding: 8px;
+            margin-right: 10px;
+        }
+        .contact-details p {
+            margin: 0;
+        }
+        .contact-address {
+            font-weight: 800;
+            font-size: 16px; font-family: 'Mulish', sans-serif;
+            line-height: 20.08px;
+            color: #212529;
+        }
+        .contact-hours {
+            color: #6c757d; font-family: 'Mulish', sans-serif;
+            font-size: 12px;font-weight:300;
+        }
+
+        .contact-address2 {
+        font-weight: 800;
+        font-size: 20px; font-family: 'Mulish', sans-serif;
+        line-height: 20.08px;
+        color: #212529;
+        }
+        .contact-hours2 {
+        color: #6c757d; font-family: 'Mulish', sans-serif;
+        font-size: 14px;font-weight:300;
+        }
+
+
+        .t14 {       color: #212529; font-family: 'Mulish', sans-serif;
+            font-size: 14px;font-weight:800;}
+             .t12 {       color: #212529; font-family: 'Mulish', sans-serif;
+            font-size: 12px; }
+             .t16 {       color: #212529; font-family: 'Mulish', sans-serif;
+            font-size: 16px; font-weight:800;}
+
+.t16300 { color: #212529; font-family: 'Mulish', sans-serif;
+font-size: 16px; font-weight:300;}
+.t36 { color: #212529; font-family: 'Mulish', sans-serif;
+font-size: 36px; font-weight:800;margin-bottom:35px;}
+
+.t20 { color: #212529; font-family: 'Mulish', sans-serif;
+font-size: 20px; font-weight:800; }
+
+
+.t10 { color: #080F2F; font-family: 'Mulish', sans-serif;
+font-size: 10px; font-weight:400;  }
+
+
+.t10 a {color:#080F2F; text-decoration: underline;}
+            @media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1280px!important;
+    }
+}.iconsoc {    height: 36px;
+    min-width: 36px!important;}
+.justify-end {justify-content: end;}
+
+.telform {margin-right: 10px;
+height: 44px;
+border-radius: 10px;} 
+
+.sendform {margin-right: 10px;
+height: 44px;width:50%;
+border-radius: 10px;}
+
+.l24 h5 {font-weight:800;font-size:24px;padding-top:20px;padding-bottom:15px;}
+.l24 p {font-size: 16px;
+font-weight: 400;}
+.bg2 {background:#F8F8F8;}
+.btnbox {width: 50%;
+border-radius: 10px;
+background: #29AD33;
+color: white;
+border: none;
+padding: 10px;}
+
+.footicon {width:25px;height:25px;}
+.fw800 {font-weight:800;}
+.pproduct {font-size:24px!important;font-weight:800!important;}
+.bgst {background: #EDEDF0;}.bgoo {background: #fff0;}
+.bgst p {font-weight: 800;
+font-size: 18px;}
+.bgoo p {font-weight: 800;
+font-size: 18px;}  
+
+.request-container h2 {
+font-size: 36px;
+font-weight: 800;
+}
+.t20400 {
+font-size: 20px;
+font-weight: 400;
+}
+
+
+.request-container2 h2 {
+font-size: 36px;
+font-weight: 800;
+}
+
+
+.request-container2 {
+background-color: #29AD33;
+padding: 20px;padding-left:0px;
+border-radius: 10px;
+color: white;
+display: flex;
+align-items: center;
+}
+
+
+.request-container2 img {
+width: 150px; /* Устанавливает фиксированную ширину */
+height: auto; /* Автоматическая высота для сохранения пропорций */
+margin-right: 20px;
+}
+
+
+.request-container {
+background-color: #4B7AFD;
+padding: 20px;padding-left:0px;
+border-radius: 10px;
+color: white;
+display: flex;
+align-items: center;
+}
+.request-container img {
+width: 150px; /* Устанавливает фиксированную ширину */
+height: auto; /* Автоматическая высота для сохранения пропорций */
+margin-right: 20px;
+}
+.request-form {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-grow: 1;
+}
+.request-form input[type="tel"] {
+border-radius: 5px;
+border: none;
+padding: 10px;
+margin-right: 10px;
+flex-grow: 1;
+margin-bottom: 10px; /* Добавлен отступ снизу */
+width: 100%;
+}
+.request-form button {
+background-color: #28a745;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+}
+.request-form button:hover {
+background-color: #218838;
+}
+.checkbox-container {
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+.checkbox-container input[type="checkbox"] {
+margin-right: 5px;
+}
+.checkbox-container label {
+color: white;
+}
+
+.greenbg {background:#29AD33;font-size:14px;font-weight:600;padding:15px 20px;border:none;border-radius:10px;color:white;
+}
+.whitebg {background:#fff; font-size:14px;font-weight:400;padding:15px 105px 15px 15px; border:none;border-radius:10px;color:white;line-height:17.57px;
+}
+
+.whitetxt {
+color: white;
+font-size: 10px;
+font-weight: 400;
+ 
+align-items: center;
+}
+
+.whitetxt a {
+color: white;
+font-size: 10px;
+font-weight: 400;
+text-decoration: underline;
+}
+
+.whitetxt input[type="checkbox"] {
+margin-right: 5px; /* Отступ между иконкой и текстом */
+}.whitetxt a {color:white;font-size:10px;font-weight:400;text-decoration:underline;}
+
+
+.request-container {
+display: flex;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.request-container img {
+max-width: 100%;
+height: auto;
+}
+
+.request-container > div {
+flex: 1;
+}
+
+
+.request-container2 {
+display: flex;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.request-container2 img {
+max-width: 100%;
+height: auto;
+}
+
+.request-container2 > div {
+flex: 1;
+}
+
+
+
+.office-section {
+max-width: 1200px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.office-title {
+font-size: 24px;
+font-weight: bold;
+color: #2c3e50;
+flex: 1;
+}
+.office-info {
+display: flex;
+align-items: center;
+flex: 2;
+}
+.office-info div {
+display: flex;
+align-items: center;
+margin-right: 20px;
+}
+.office-info img {
+width: 24px;
+height: 24px;
+margin-right: 10px;
+}
+.office-info span {
+font-size: 18px;
+color: #2c3e50;
+}
+.office-info .time {
+font-size: 14px;
+color: #7f8c8d;
+}
+.contact-icons {
+display: flex;
+align-items: center;
+}
+.contact-icons a {
+margin-left: 15px;
+}
+.contact-icons img {
+width: 24px;
+height: 24px;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.input-group {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.whitebg {
+background-color: white;
+padding: 10px;color:#8A8A8A;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 1rem;
+flex: 1;
+}
+
+.greenbg {
+background-color: #29AD33;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.greenbg:hover {
+background-color: darkgreen;
+}
+
+
+
+.bluenbg {
+background-color: #4B7AFD;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.bluenbg:hover {
+background-color: #1956fc;
+}
+
+
+
+.whitetxt {
+color: white;
+font-size: 10px;
+font-weight: 400;
+display: flex;
+align-items: center;
+}
+
+.whitetxt a {
+color: white;
+font-size: 10px;
+font-weight: 400;
+text-decoration: underline;
+margin-left: 5px; /* Отступ для улучшения читаемости */
+}
+
+.whitetxt input[type="checkbox"] {
+margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="bgmain">
+    <header class="bg-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <img src="img/logotype_main.png" alt="Чистый Мир" class="img-fluid">
+                </div>
+                <div class="col-md-2 text_p">
+                    <p class="mb-0 t14"><strong>Вывоз мусора 24/7 <br>в Казани и пригороде</strong></p>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info justify-end">
+                        <img src="img/loca.png" alt="Location Icon">
+                        <div class="contact-details">
+                            <p class="contact-address">г. Москва, 6-я радиальная ул., 20</p>
+                            <p class="contact-hours">ПН-ПТ с 8:00 до 19:00 СБ-ВС с 9:00 до 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-md-2 " style="padding:0px;">
+                    <div class="contact-info justify-end">
+                        <img src="img/phone.png" alt="Location Icon">
+                        <div class="contact-details">
+                           <p class="mb-0 t16">  +7 (495) 128 08 92<br></p><a class="t12" style="color:#4B7AFD;"href="#">Заказать звонок</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 text-right">
+                     <div class="d-inline-flex">
+                        <a href="whatsapp_link" class="mx-2 "><img src="img/whatsapp.png" alt="WhatsApp Icon" class="img-fluid rounded-circle iconsoc"></a>
+                        <a href="telegram_link"><img src="img/telegram.png" alt="Telegram Icon" class="img-fluid rounded-circle iconsoc"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+   
+    <main class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <h1 class="t36">Вывоз строительного мусора <span class="highlight">от 1 часа</span> <br>и 10 000 рублей</h1>
+            <form class="mt-4">
+        <div class="form-group">
+            <label for="phoneInput3" class="t20">Оставьте заявку <br>на вывоз мусора прямо сейчас</label>
+            <p class="t16300">и мы приедем к вам в течение 1 часа</p>
+            <div class="input-group">
+                <input style="border-radius:10px;" type="tel" class="telform form-control phone-input" id="phoneInput3" placeholder="+7 --- --- ----">
+                <button type="button" class="btn cta-button sendform">Оставить заявку</button>
+            </div>
+            <div class="form-check mt-3">
+                <input type="checkbox" class="form-check-input" id="agreement">
+                <label class="t10 form-check-label small" for="agreement">Принимаю <a href="#">условия обработки персональных данных</a></label>
+            </div>
+        </div>
+             
+            </form>
+        </div>
+        <div class="col-md-6">
+            <!-- Placeholder for the image or any other content -->
+        </div>
+    </div>
+        <div class="features">
+            <div class="feature-item">
+                <img src="img/icon1.svg" alt="Icon"> В штате свои грузчики
+            </div>
+            <div class="feature-item">
+                <img src="img/icon2.svg" alt="Icon"> Приедем в течение 1 часа
+            </div>
+            <div class="feature-item">
+                 24/7 Вывозим мусор круглосуточно
+            </div>
+            <div class="feature-item">
+                <img src="img/icon4.svg" alt="Icon"> Автомобили с пропуском в центр
+            </div>
+        </div>
+</div>
+
+<div class="bg2">
+<div class="container pt-5">
+    
+                <h2 class="section-title pb-5">Преимущества работы с нами</h2> 
+
+<div class="row mt-5 l24 text-center">
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+            <img src="img/l1.svg" class="licon" alt="Собственный автопарк">
+        </div>
+        <h5>Собственный автопарк</h5>
+        <p>Газель 10м3, бункеровозы 8м3, мультилифты 20,27,32 м3</p>
+    </div>
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+            <img src="img/l2.svg"  class="licon" alt="В штате свои грузчики">
+        </div>
+        <h5>В штате свои грузчики</h5>
+        <p>Свои опытные грузчики <br>для сбора, выноса и погрузки мусора</p>
+    </div>
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+            <img src="img/l3.svg"  class="licon" alt="Удобная оплата">
+        </div>
+        <h5>Удобная оплата</h5>
+        <p>Принимаем все виды оплат</p>
+    </div>
+</div>
+<div class="row mt-4 l24 text-center">
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+        <img src="img/l4.svg"   class="licon" alt="День в день">
+        </div>
+        <h5>День в день</h5>
+        <p>Выполнение заказа в день поступления</p>
+    </div>
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+            <img src="img/l5.svg"  class="licon" alt="Казань и пригород">
+        </div>
+        <h5>Казань и пригород</h5>
+        <p>Работаем по всей Казани и пригороду</p>
+    </div>
+    <div class="col-md-4 feature-item">
+        <div class="feature-item-icon">
+            <img src="img/l6.svg" class="licon" alt="Пропуск в центр">
+        </div>
+        <h5>Пропуск в центр</h5>
+        <p>Все автомобили имеют разрешение на въезд и выезд в центр города</p>
+    </div>
+</div>
+</div>
+
+
+
+ 
+<div class="container mt-5">
+
+    <h2 class="section-title pb-2">Услуги по вывозу мусора</h2>
+
+    <div class="row">
+     
+            <div class="service-container">
+        <div class="col-md-4 service-item">
+            <img src="img/box1.png" alt="Контейнер 8 М3">
+            <p class="pproduct">Контейнер 8 М3</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+        <div class="col-md-4 service-item">
+            <img src="img/box2.png" alt="Контейнер 8 М3">
+            <p class="pproduct">Контейнер 8 М3</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+        <div class="col-md-4 service-item">
+            <img src="img/box3.png" alt="Контейнер 8 М3">
+            <p class="pproduct">Контейнер 8 М3</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+   
+     
+        <div class="col-md-4 service-item">
+            <img src="img/box4.png" alt="Газель">
+            <p class="pproduct" > Газель</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+        <div class="col-md-4 service-item">
+            <img src="img/box5.png" alt="Самосвал">
+            <p class="pproduct">Самосвал</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+        <div class="col-md-4 service-item">
+            <img src="img/box6.png" alt="Ломовоз">
+            <p class="pproduct">Ломовоз</p>
+            <p>Размеры: 3.34 х 1.92 х 1.39 м<br>Грузоподьемность: до 5 тонн</p>
+            <p class="price">Цена: от 7000 руб.</p>
+            <button class="btnbox">Заказать</button>
+        </div>
+    </div>
+</div></div>
+
+
+
+<div class="container mt-5">
+
+    <h2 class="section-title pb-2">Что мы возим?</h2>
+
+ 
+
+        <div class="row service-container">
+            <div class="col-md-3 service-item bgst ">
+                <div class="icon-container">
+                    <img src="img/bg1.svg" alt="Строительный мусор">
+                </div>
+                <p>Строительный мусор</p>
+            </div>
+            <div class="col-md-3 service-item   bgoo ">
+                <div class="icon-container">
+                    <img src="img/bg2.png" alt="Крупногабаритный мусор">
+                </div>
+                <p>Крупногабаритный мусор</p>
+            </div>
+            <div class="col-md-3 service-item bgst">
+                <div class="icon-container">
+                <img src="img/bg3.png"  alt="Лом кирпича, бетона">
+                </div>
+                <p>Лом кирпича, бетона</p>
+            </div>
+            <div class="col-md-3 service-item bgoo">
+                <div class="icon-container">
+                <img src="img/bg4.svg"  alt="Старую мебель">
+                </div>
+                <p>Старую мебель</p>
+            </div>
+            <div class="col-md-3 service-item bgoo">
+                <div class="icon-container">
+                    <img src="img/bg5.png"  alt="Старую технику">
+                </div>
+                <p>Старую технику</p>
+            </div>
+            <div class="col-md-3 service-item bgst">
+                <div class="icon-container">
+                    <img src="img/bg6.png"  alt="Старые окна">
+                </div>
+                <p>Старые окна</p>
+            </div>
+            <div class="col-md-3 service-item bgoo">
+                <div class="icon-container">
+                    <img src="img/bg7.png"  alt="Отходы древесины">
+                </div>
+                <p>Отходы древесины</p>
+            </div>
+            <div class="col-md-3 service-item bgst">
+                <div class="icon-container">
+                <img src="img/bg8.svg"  alt="Вывоз снега">
+                </div>
+                <p>Вывоз снега</p>
+            </div>
+        </div>
+   
+</div>
+ 
+
+ 
+
+<div class="container mt-5">
+<div class="request-container">
+    <img src="img/leftphoto.png" alt="Image">
+    <div>
+        <h2>Оставьте заявку на вывоз мусора прямо сейчас</h2>
+        <p class="t20400">и мы приедем к вам в течение 1 часа</p>
+    </div>
+    <div class="form">
+        <div class="input-group">
+            <input class="whitebg" type="text" id="phoneInput" placeholder="+7 --- --- -- --">
+            <button class="greenbg">Оставить заявку</button>
+        </div>
+        <label class="whitetxt">
+            <input type="checkbox">
+            Принимаю <a href="#">условия обработки персональных данных</a>
+        </label>
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const phoneInput = document.getElementById('phoneInput');
+        
+        // Установить значение по умолчанию
+        phoneInput.value = '+7 ';
+        
+        // Установить курсор после префикса +7 
+        phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length);
+        
+        phoneInput.addEventListener('focus', function() {
+            // Убедиться, что префикс +7 всегда в начале
+            if (phoneInput.value.indexOf('+7 ') !== 0) {
+                phoneInput.value = '+7 ';
+            }
+            // Установить курсор после префикса +7 
+            phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length);
+        });
+        
+        phoneInput.addEventListener('input', function(e) {
+            let value = phoneInput.value;
+    
+            // Убедиться, что префикс +7 всегда в начале
+            if (!value.startsWith('+7 ')) {
+                value = '+7 ' + value.replace(/[^0-9]/g, '');
+            } else {
+                value = '+7 ' + value.slice(3).replace(/[^0-9]/g, '');
+            }
+    
+            // Ограничить длину до 16 символов (+7 и 10 цифр с пробелами)
+            if (value.length > 16) {
+                value = value.slice(0, 16);
+            }
+    
+            phoneInput.value = value;
+        });
+    }); 
+</script>
+<style>.partner-section {
+background-color: #f8f9fa;
+border-radius: 10px;
+padding: 20px;
+}
+.partner-list {
+list-style: none;
+padding: 0;
+}
+.partner-list li {
+margin-bottom: 20px;
+font-size: 18px;
+font-weight: 500;
+}
+.partner-list li::before {
+content: '✔';
+color: #007bff;
+margin-right: 10px;
+}
+.partner-title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.image-container img {
+max-width: 100%;
+border-radius: 10px;
+}
+
+.bgser {background:#EDEDF0;border-radius:18px;width:1284px!important}
+
+.pt-6, .py-6 {
+padding-top: 4rem !important;
+}
+
+.pt-7, .py-7 {
+padding-top: 5rem !important;
+}
+
+.pb-6  {
+padding-bottom: 5rem !important;
+}
+
+.pb-7 {
+padding-bottom: 6rem !important;
+}
+.justify-center {justify-content:center;}
+.t20800 {font-size: 20px;
+font-weight: 800;}
+</style>
+
+ <div class="bgser container mt-5">
+ 
+<div class="row service-container">
+ 
+        <div class="col-md-7 pt-6">
+            <h2 class="section-title pb-2 pl-2">С кем работаем?</h2>
+            <div class="row">
+                <div class="col-md-6 pl-3">
+                    <ul class="partner-list pl-4">
+                        <li>Государственные учреждения</li>
+                        <li>Коттеджные поселки</li>
+                        <li>Магазины и бизнес-центры</li>
+                        <li>Частные лица</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="partner-list">
+                        <li>Строительные компании</li>
+                        <li>ТСЖ, СНТ и управляющие компании</li>
+                        <li>Клининговые компании</li>
+                        <li>Рестораны и кафе</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 image-container pt-5 pb-5">
+            <img src="img/worker.png" alt="Worker Image">
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+
+<style>
+    .trust-section {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .trust-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .logo-item {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .logo-item img {
+        max-width: 100%;
+        height: auto;
+    }
+    .justify-start{justify-content:start;}
+</style>
+
+
+
+<div class=" container mt-5">
+
+    <div class="row service-container">
+<div class="trust-section">
+            <h2 class="section-title pb-2">Нам доверяют</h2>    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part1.png" alt="Татсоцбанк">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part2.png" alt="Таттелеком">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part3.png" alt="Ак Барс Банк">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part4.png" alt="МТС">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part5.png" alt="Татнефть">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part6.png" alt="Leroy Merlin">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part7.png" alt="Luciano">
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="logo-item">
+                <img src="img/part8.png" alt="Университет Иннополис">
+            </div>
+        </div>
+    </div>
+</div></div></div>
+
+
+
+
+
+
+<div class=" container mt-5">
+
+    <div class="row service-container">
+        <div class="trust-section"><div class="row">
+        <div class="col-6 col-md-7">
+            <h2 class="section-title2 pb-2">У нас есть все необходимые лицензии и пропуска для работы в любой точке Казани</h2>
+            </div></div>
+
+
+
+
+
+
+<div id="multiItemCarousel" class="carousel slide" data-ride="carousel">
+ 
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="First slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Second slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Third slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Fourth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Fifth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Sixth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Seventh slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Eighth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Ninth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Tenth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Eleventh slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/license1.png" alt="Twelfth slide">
+            <div class="card-body">
+              <h5 class="card-title">Лицензия</h5>
+              <p class="card-text">Дополнительная информация</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev custom-carousel-control" href="#multiItemCarousel" role="button" data-slide="prev">
+    <img src="img/rightslid.svg" alt="Previous">
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next custom-carousel-control" href="#multiItemCarousel" role="button" data-slide="next">
+    <img src="img/leftslid.svg" alt="Next">
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<style>
+
+.card-img-top {
+padding-left:15%;
+padding-right:10%;
+}
+
+.custom-carousel-control {
+  width: 100px;
+  height: 100px;
+  background: transparent; /* Фон сделаем прозрачным */
+  border: none; /* Уберем границу */
+}
+.custom-carousel-control {
+  width: 100px;
+  height: 100px;
+  background: transparent; /* Фон сделаем прозрачным */
+  border: none; /* Уберем границу */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+ top: 40%;
+    bottom: 0%;
+    transform: translateY(-50%);
+    width: 0%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: none;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: "";
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+.carousel-control-prev-icon::before {
+  border-right: 50px solid rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-next-icon::before {
+  border-left: 50px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff0;
+    background-clip: border-box;
+    border: none;
+    border-radius: .25rem;
+}</style>
+
+
+
+
+        </div>
+    </div>
+
+
+ 
+
+</div>
+
+
+ 
+ 
+ 
+
+<div class="container mt-5">
+    <div class="request-container2">
+        <img src="img/leftphoto.png" alt="Image">
+        <div>
+            <h2>Оставьте заявку на вывоз мусора прямо сейчас</h2>
+            <p class="t20400">и мы приедем к вам в течение 1 часа</p>
+        </div>
+        <div class="form">
+            <div class="input-group">
+                <input class="whitebg phone-input" id="phoneInput2" type="text" placeholder="+7 --- --- -- --">
+                <button class="bluenbg submit-btn">Оставить заявку</button>
+            </div>
+            <label class="whitetxt">
+                        <input type="checkbox">
+                        Принимаю <a href="#">условия обработки персональных данных</a>
+                    </label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class=" container mt-5">
+     
+        <div class="trust-section">
+        <div class="row">
+            <div class="col-md-3">
+                <h2 class="section-title2 pb-2">Адрес офиса</h2>
+            </div>
+        
+            <div class="col-md-5 text-left">
+                <div class="contact-info justify-end" style="
+            justify-content: left;
+        ">
+                    <img src="img/loca.png" alt="Location Icon">
+                    <div class="contact-details">
+                        <p class="contact-address2">г. Москва, 6-я радиальная ул., 20</p>
+                        <p class="contact-hours2">ПН-ПТ с 8:00 до 19:00 СБ-ВС с 9:00 до 18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 " style="padding:0px;">
+                <div class="contact-info justify-start">
+                    <img src="img/phone.png" alt="Location Icon">
+                    <div class="contact-details">
+                        <p class="mb-0 t20800"> +7 (495) 128 08 92 </p>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="col-md-1 text-right">
+                <div class="d-inline-flex">
+                    <a href="whatsapp_link"
+                        class="mx-2 "><img src="img/whatsapp.png" alt="WhatsApp Icon" class="img-fluid rounded-circle iconsoc"></a>
+                    <a
+                        href="telegram_link"><img src="img/telegram.png" alt="Telegram Icon" class="img-fluid rounded-circle iconsoc"></a>
+                </div>
+            </div>
+         
+        </div>
+
+         
+
+
+        </div>
+     
+<div class="row service-container">
+
+    <img src="img/map.png" class="map">
+
+</div></div>
+
+ 
+ 
+
+ 
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h5>“Премьер строй” © 2024</h5>
+                    <p class="t16400">Вывоз строительного мусора в Москве<br> и Московской области</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <div class="contact-item ">
+                        <img src="img/local.svg" alt="Location Icon">
+                        <span class="pl-2 fw800 pb-1">г. Москва, 6-я радиальная ул., 20</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="img/phonefoot.svg" alt="Phone Icon">
+                        <span class="pr-3 pl-2 fw800">+7 (495) 128 08 92</span>
+
+                        <a href="telegram_link"><img src="img/telegram.png" class="footicon" alt="Telegram Icon"></a>
+                        <a href="whatsapp_link"><img src="img/whatsapp.png" class="footicon" alt="WhatsApp Icon"></a>
+                     </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Реквизиты</h5>
+                    <p class="t14400">ИНН 7724481990 КПП 772401001 <br> ОГРН 1197746428725 <br> Р/С 407028105100000593773 <br><br> Банковские реквизиты: <br>АО Тинькофф Банк<br>БИК
+                    Банка 044525974 <br> К/С: 3010181101452500000974</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+ 
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const phoneInputs = document.querySelectorAll('.phone-input');
+            
+            phoneInputs.forEach(phoneInput => {
+                // Установить значение по умолчанию
+                phoneInput.value = '+7 ';
+                
+                // Установить курсор после префикса +7
+                phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length);
+                
+                phoneInput.addEventListener('focus', function() {
+                    // Убедиться, что префикс +7 всегда в начале
+                    if (phoneInput.value.indexOf('+7 ') !== 0) {
+                        phoneInput.value = '+7 ';
+                    }
+                    // Установить курсор после префикса +7
+                    phoneInput.setSelectionRange(phoneInput.value.length, phoneInput.value.length);
+                });
+                
+                phoneInput.addEventListener('input', function(e) {
+                    let value = phoneInput.value;
+
+                    // Удалить все символы, кроме цифр после "+7 "
+                    if (value.startsWith('+7 ')) {
+                        value = '+7 ' + value.slice(3).replace(/[^0-9]/g, '');
+                    } else {
+                        value = '+7 ' + value.replace(/[^0-9]/g, '');
+                    }
+
+                    // Ограничить длину до 16 символов (+7 и 10 цифр с пробелами)
+                    if (value.length > 16) {
+                        value = value.slice(0, 16);
+                    }
+
+                    phoneInput.value = value;
+                });
+            });
+        });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
